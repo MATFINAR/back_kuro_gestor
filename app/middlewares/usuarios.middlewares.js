@@ -5,9 +5,9 @@ config();
 
 export const tokenSign = (data) => {
   return jwt.sign({
-    email: data.email,
     usuario_id: data.usuario_id,
-    rol: data.rol
+    email: data.email,
+    rol: data.rol,
   }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_TIMEEXPIRED,
   });
